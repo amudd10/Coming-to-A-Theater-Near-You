@@ -34,18 +34,25 @@
     <div class="container">
       <div class="jumbotron" style="text-align:center">
         <h2>COMING TO A THEATER NEAR YOU</h2>
-        <h3>Movie Recomindation: <span class="star-wars"></span></h3>
+        <h4>1. Start by typing in a movie title</br> 
+            2. Suggestions will populate below </br> 
+            3. Select your movie title and click Recommendation! <span class="star-wars"></span></h4> 
         <div class="row">
-          <div class="col-md-offset-4 col-md-4"><h3 class="counter">0</h3></div>
+          <div <!-- The form -->
+            <form class="example" action="action_page.php">
+              <input type="text" placeholder="Search.." name="search">
+              <button type="submit" <h4> Recommendation! </h4><i class="fa fa-search"></i></button>
+            </form>
+          </div>
         </div>
         <div class="row">
           <div class="col-md-offset-4 col-md-4">
-            <button type="button" class="btn btn-default btn-lg upvote" value=1>
+            <!-- <button type="button" class="btn btn-default btn-lg upvote" value=1>
               <span class="glyphicon glyphicon-circle-arrow-up"></span> Upvote
             </button>
             <button type="button" class="btn btn-default btn-lg downvote" value=-1>
               <span class="glyphicon glyphicon-circle-arrow-down"></span> Downvote
-            </button>
+            </button> -->
           </div>
         </div>
       </div>
