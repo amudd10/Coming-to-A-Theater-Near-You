@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="static/css/style.css" />
     <style>
       body {
-        background-color: black;
+        background-color:rgba(0, 0, 0, 0.757);
       }
 
       .jumbotron {
@@ -31,29 +31,41 @@
   </head>
 
   <body>
-    <div class="container">
+    <div class="search-container">
       <div class="jumbotron" style="text-align:center">
         <h2>COMING TO A THEATER NEAR YOU</h2>
-        <h4>1. Start by typing in a movie title</br> 
+        <h3>1. Start by typing in a movie title</br> 
             2. Suggestions will populate below </br> 
-            3. Select your movie title and click Recommendation! <span class="star-wars"></span></h4> 
+            3. Select your movie title and click Recommendation! <span class="star-wars"></span></h3> 
         <div class="row">
           <div <!-- The form -->
-            <form class="example" action="action_page.php">
-              <input type="text" placeholder="Search.." name="search">
+            <!-- <form class="example" action="action_page.php" target="_self" >
+              <input id="searchbar" onkeyup="search_animal()" type="text" placeholder="Search.." name="search">
               <button type="submit" <h4> Recommendation! </h4><i class="fa fa-search"></i></button>
-            </form>
+            </form> -->
+            <div>
+              <input type="text" id="searchBar" placeholder="Search...">
+              <button type="button" onclick="search()">Recommendations!</button>
+            </div>
+           
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-offset-4 col-md-4">
+        
+          <!-- <div class="col-md-offset-4 col-md-4"> -->
             <!-- <button type="button" class="btn btn-default btn-lg upvote" value=1>
               <span class="glyphicon glyphicon-circle-arrow-up"></span> Upvote
             </button>
             <button type="button" class="btn btn-default btn-lg downvote" value=-1>
               <span class="glyphicon glyphicon-circle-arrow-down"></span> Downvote
             </button> -->
-          </div>
+          <!-- </div> -->
+        </div>
+        <div class="row">
+        <div class="col-md-offset-4 col-md-4">
+        <div class= "results-container">
+          <div id="results"></div>
+        </div>
+        </div>
         </div>
       </div>
     </div>
@@ -62,6 +74,7 @@
     <div id="stars2"></div>
     <div id="stars3"></div>
 
-    <script src="static/js/logic.js"></script>
+
+    <script src="static/jss/logic.js"></script>
   </body>
 </html>

@@ -71,11 +71,11 @@ html {
     margin-top: -60px;
     padding-left: 10px;
   }
-  #title span {
+  /* #title span {
     background: -webkit-linear-gradient(white, #38495a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
+  } */
   
   @keyframes animStar {
     from {
@@ -114,7 +114,7 @@ html {
   }
   
   form.example button:hover {
-    background: #0b7dda;
+    background: #f4a460;
   }
   
   /* Clear floats */
@@ -123,3 +123,20 @@ html {
     clear: both;
     display: table;
   }
+
+  .results-container {
+    border: 1px solid #ccc;
+    background-color: #483d8b;
+    padding: 40px;
+    width: 500px;
+    margin-top: 20px;
+    ;
+  }
+  .results-container {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000;
+    margin: 0;
+    text-align: center;
+  }
+
