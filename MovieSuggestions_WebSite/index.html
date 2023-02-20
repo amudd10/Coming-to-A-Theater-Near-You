@@ -65,8 +65,16 @@
               <button type="button" onclick="search()">Search</button>
             </div>
             <div class="row">
-              <input type="text" id="searchBar" placeholder="Search...">
-              <button type="button" onclick="search()">Search</button>
+              <div class="dropdown">
+                <input type="text" id="myInput" onkeyup="filterFunction()" placeholder="Search...">
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="#HTML">HTML</a>
+                  <a href="#CSS">CSS</a>
+                  <a href="#JavaScript">JavaScript</a>
+                  <a href="#PHP">PHP</a>
+                  <a href="#Python">Python</a>
+                </div>
+              </div>
             </div>
         
             
@@ -99,6 +107,6 @@
     <div id="stars3"></div>
 
 
-    <script src="static/jss/logic.js"></script>
+    <script src="static/js/logic.js"></script>
   </body>
 </html>
