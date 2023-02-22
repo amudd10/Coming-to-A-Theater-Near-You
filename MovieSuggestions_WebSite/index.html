@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: cornflowerblue;">
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: rgb(166, 171, 181);">
       <a class="navbar-brand" href="index.html">Movie Trends</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -15,7 +15,7 @@
           </li>
         </ul>
       </div>
-  </nav>
+  </nav> -->
   
   
     <meta charset="UTF-8" />
@@ -49,6 +49,21 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: rgb(153, 162, 178);">
+      <a class="navbar-brand" href="visualizations.html">Movie Trends</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Movie Success Prediction<span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+
   <div class="container">
     <div class="row">
       <div class="jumbotron" style="text-align:center">
@@ -74,18 +89,33 @@
             </form> -->
           <div>
               <div class="row">
-                <input type="text" id="searchBar" placeholder="Search...">
+                <input type="text" id="searchBar" placeholder="Budget">
                 <button type="button" onclick="search()">Search</button>
               </div>
           </br>
             <div class="row">
-              <input type="text" id="searchBar" placeholder="Search...">
+              <input type="text" id="searchBar" placeholder="Runtime">
               <button type="button" onclick="search()">Search</button>
             </div>
           </br>
+          <div class="row">
+            <input type="text" id="searchBar" placeholder="Runtime">
+            <button type="button" onclick="search()">Search</button>
+          </div>
+        </br>
+        <div class="row">
+          <input type="text" id="searchBar" placeholder="Runtime">
+          <button type="button" onclick="search()">Search</button>
+        </div>
+      </br>
+          <div class="row">
+            <input type="text" id="searchBar" placeholder="Runtime">
+            <button type="button" onclick="search()">Search</button>
+          </div>
+          </br>
             <div class="row">
               <div class="dropdown">
-                <input type="text" id="myInput" onkeyup="filterFunction()" placeholder="Search...">
+                <input type="text" id="myInput" onkeyup="filterFunction()" placeholder="Original Language">
                 <div id="myDropdown" class="dropdown-content">
                   <a href="#HTML">HTML</a>
                   <a href="#CSS">CSS</a>
