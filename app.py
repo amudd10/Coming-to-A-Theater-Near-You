@@ -14,7 +14,7 @@ genres_list = ['Action', 'Romance', 'Thriller', 'Comedy', 'Drama']
 def home():
     return render_template('index.html', genres=genres_list)
 
-@app.route('/predict', methods=['POST'])
+# @app.route('/predict', methods=['POST'])
 def predict():
     # Get the input data from the form
     budget = int(request.form['budget'])
