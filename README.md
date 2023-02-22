@@ -1,13 +1,16 @@
 # Coming-to-A-Theater-Near-You
 
-## Project Intro/Objective
-The purpose of this project is to utilize Machine Learning to predict movie ratings based on attributes like director, actors, and budget. 
+## Overview
+The purpose of this project is to utilize Machine Learning to determine whether a movie is successful based on attributes such as: budget, original language, runtime, revenue, popularity, rating, director, and genre.
 
 ### Methods Used
 * Machine Learning
 * Data Visualization
 * Predictive Modeling
 * etc.
+
+### Data Source
+
 
 ### Technologies
 * Python
