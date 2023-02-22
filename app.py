@@ -22,7 +22,7 @@ def predict():
     runtime = int(request.form['runtime'])
     vote_average = float(request.form['vote_average'])
     revenue = int(request.form['revenue'])
-    selected_genres = request.form.getlist('genres')
+    selected_genres = request.form.getlist('genres[]')
 
     # Create a dictionary to hold the input data
     input_data = {
@@ -54,4 +54,7 @@ def predict():
     else:
         result = 'unsuccessful'
     
-    return render_template('index.html', result=result)
+    return {'result': result}
+
+if __name__ == '__main__':
+    app.run(debug=True)

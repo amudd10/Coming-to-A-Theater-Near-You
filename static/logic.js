@@ -1,92 +1,52 @@
-// Define the search function that will be called when the Search button is clicked
-function search() {
-    // Get the search term from the input box
-    var searchTerm = document.getElementById("searchBar").value;
-    
-    // Make an AJAX request to the Flask app to get the movie suggestions
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "/suggest-movies/" + searchTerm, true);
-    xhr.onload = function () {
-      if (xhr.status === 200) {
-        // Parse the JSON response from the Flask app
-        var data = JSON.parse(xhr.responseText);
-        
-        // Update the movie list with the suggestions
-        var movieList = document.getElementById("movieList");
-        movieList.innerHTML = "";
-        for (var i = 0; i < data.length; i++) {
-          var listItem = document.createElement("li");
-          listItem.innerHTML = data[i]["title"];
-          listItem.addEventListener("click", function() {
-            // When a movie title is clicked, show the recommendation button
-            document.getElementById("recommendButton").style.display = "inline";
-          });
-          movieList.appendChild(listItem);
-        }
-      } else {
-        // If the request fails, show an error message
-        console.error(xhr.statusText);
-        document.getElementById("movieList").innerHTML = "Error: Could not get movie suggestions";
-      }
-    };
-    xhr.send();
-  }
-  
-  // Define the recommend function that will be called when the Recommend button is clicked
-  function recommend() {
-    // Get the selected movie title from the list
-    var selectedTitle = document.querySelector("#movieList li.selected").innerHTML;
-    
-    // Get the inputs from the user
-    var budget = document.getElementById("budgetInput").value;
-    var genre = document.getElementById("genreInput").value;
-    var language = document.getElementById("languageInput").value;
-    var popularity = document.getElementById("popularityInput").value;
-    var revenue = document.getElementById("revenueInput").value;
-    var runtime = document.getElementById("runtimeInput").value;
-    var voteAverage = document.getElementById("voteAverageInput").value;
-    
-    // Make an AJAX request to the Flask app to get the recommendation
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "/get-recommendation", true);
-    xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.onload = function () {
-      if (xhr.status === 200) {
-        // Parse the JSON response from the Flask app
-        var data = JSON.parse(xhr.responseText);
-        
-        // Update the recommendation text with the result
-        var recommendationText = document.getElementById("recommendationText");
-        recommendationText.innerHTML = data["recommendation"];
-      } else {
-        // If the request fails, show an error message
-        console.error(xhr.statusText);
-        document.getElementById("recommendationText").innerHTML = "Error: Could not get recommendation";
-      }
-    };
-    xhr.send(JSON.stringify({
-      "title": selectedTitle,
-      "budget": budget,
-      "genre": genre,
-      "language": language,
-      "popularity": popularity,
-      "revenue": revenue,
-      "runtime": runtime,
-      "vote_average": voteAverage
-    }));
-  }
-  
-  // Add event listeners to the movie list items
-  var movieList = document.getElementById("movieList");
-  movieList.addEventListener("click", function(event) {
-    var items = movieList.getElementsByTagName("li");
-    for (var i = 0; i < items.length; i++) {
-      items[i].classList.remove("selected");
-    }
-    event.target.classList.add("selected");
-  });
-  
-  // Hide the recommendation button by default
-  document.getElementById("recommendButton").style.display = "none";
-  ``
-  
+function recommendMovie() {
+  console.log("Function called!");
+  // Retrieve the values of the form fields
+  // var budget = document.getElementById('budget').value;
+  // console.log(budget);
+  // // var genres = document.getElementsByName('genres');
+  // var genres = 'Action'
+  // console.log(genres);
+  // var originalLanguage = document.getElementById('original_language').value;
+  // console.log(originalLanguage);
+  // var popularity = document.getElementById('popularity').value;
+  // console.log(popularity);
+  // var revenue = document.getElementById('revenue').value;
+  // console.log(revenue);
+  // var runtime = document.getElementById('runtime').value;
+  // console.log(runtime);
+  // var voteAverage = document.getElementById('voteAverage').value;
+  // console.log(voteAverage)
+
+  // // Convert the genres to an array of strings
+  // var genresArray = [];
+  // for (var i = 0; i < genres.length; i++) {
+  //   if (genres[i].checked) {
+  //     genresArray.push(genres[i].value);
+  //   }
+  // }
+
+  // // Make an AJAX request to the server to get the prediction
+  // var xhr = new XMLHttpRequest();
+  // xhr.open('POST', '/predict', true);
+  // xhr.setRequestHeader('Content-Type', 'application/json');
+  // xhr.onreadystatechange = function() {
+  //   if (this.readyState == 4 && this.status == 200) {
+  //     var response = JSON.parse(this.responseText);
+  //     var prediction = response.result;
+  //     if (prediction == 'successful') {
+  //       alert('This movie is predicted to be successful!');
+  //     } else {
+  //       alert('This movie is predicted to be unsuccessful.');
+  //     }
+  //   }
+  // };
+  // xhr.send(JSON.stringify({
+  //   budget: budget,
+  //   genres: genresArray,
+  //   original_language: originalLanguage,
+  //   popularity: popularity,
+  //   revenue: revenue,
+  //   runtime: runtime,
+  //   vote_average: voteAverage
+  // }));
+}
