@@ -1,7 +1,8 @@
 # Coming-to-A-Theater-Near-You
 
 ## Overview
-The purpose of this project is to utilize Machine Learning to determine whether a movie is successful based on attributes such as: budget, original language, runtime, revenue, popularity, rating, director, and genre.
+The purpose of this project is to utilize Machine Learning to determine whether a movie is successful based on attributes such as: budget, original language, runtime, revenue, popularity, rating, director, and genre. We wanted to observe any trends that occur when comparing these different attributes and answer the question: What is the most important factor in determining the success of a movie?
+
 
 ### Methods Used
 * Machine Learning
@@ -21,6 +22,11 @@ The purpose of this project is to utilize Machine Learning to determine whether 
 
 ## Project Description
 (Provide more detailed overview of the project.  Talk a bit about your data sources and what questions and hypothesis you are exploring. What specific data analysis/visualization and modelling work are you using to solve the problem? What blockers and challenges are you facing?  Feel free to number or bullet point things here)
+
+## Analysis
+The successfulness of a movie can be determined in many different ways. While the highest revenue-generating genres were Animation, Adventure, and Science; viewers voted higher on average for Foreign, History, and War. When comparing the Top 10 List of films based on Revenue and Rating, they were two completely different lists. While we expected a positive relationship between budget and revenue (thought process: higher budget = better production = more revenue), but there was too much variability in the data to see a significant correlation. Additionally, most average voter ratings ranged from 5-8 out of 10 and having a higher revenue did not necessarily equate to having a higher voter rating.
+
+Overall, it seems that there is no one clear determinant and we have to consider multiple factors. 
 
 ### Challenges
 We faced many challenges in creating this project. 
