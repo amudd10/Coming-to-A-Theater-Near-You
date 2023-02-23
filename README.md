@@ -10,9 +10,6 @@ The purpose of this project is to utilize Machine Learning to determine whether 
 * Predictive Modeling
 * etc.
 
-### Data Source
-
-
 ### Technologies
 * Python
 * Pandas, jupyter
