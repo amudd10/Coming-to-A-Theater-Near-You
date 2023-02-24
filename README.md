@@ -20,7 +20,11 @@ The purpose of this project is to utilize Machine Learning to determine whether 
 * etc. 
 
 ## ETL
-(Provide more detailed overview of the project.  Talk a bit about your data sources and what questions and hypothesis you are exploring. What specific data analysis/visualization and modelling work are you using to solve the problem? What blockers and challenges are you facing?  Feel free to number or bullet point things here)
+Our data was in .csv format initially. We used the combination of Python and Pandas to clean and organize the data. Issues we encouraged inclined our initial data set being ill-suited for our purposes. The structure appeared fine at first but as we worked with it, we encountered fundamental problems with the structure, namely over-complicated connections being required for even simple queries, and columns that were composed of strings that were inconsistently actually lists.
+
+We opted to use a flask app for this project, as, as our data simplified, so did our needs.
+Similarly, our initial plan was to host on AWS and deploy with Lambda or SageMaker. As the project continued, we ended up choosing to deploy our model pre-trained. This removed the need for AWS, and Heroku became our best option. 
+
 
 ## Machine Learning
 We used a logistic regression model for our project. We trained it locally, then uploaded it as a pre-trained model using joblib. It hads an overall accuracy of 81% for predicting the success of a movie, with the breakdown favoring the unsuccessful movie prediction, 84% verses 71% for sucessful ones. The recall again favored unsucessful, at 0.9 verses 0.59 for successful movies. Finally, the f1-score is 0.87 for unsuccessful movies and 0.64 for successful movies.
